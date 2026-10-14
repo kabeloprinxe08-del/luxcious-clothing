@@ -1,0 +1,74 @@
+:root{--bg:#fff;--soft:#f6f4f1;--ink:#111;--mute:#6b6b6b;--line:#e8e5e0;--gold:#a88b5a;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.bar{background:var(--ink);color:#fff;text-align:center;font-size:12px;letter-spacing:.12em;padding:9px;text-transform:uppercase}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw}
+.logo{font-family:var(--serif);font-size:26px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.logo{text-align:center;line-height:1.1}.logo small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.34em;color:var(--gold);margin-top:5px;font-weight:400}
+nav{display:flex;gap:28px;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 34px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--ink);transition:.25s}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink)}.btn.o:hover{background:var(--ink);color:#fff}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:12vh 6vw;background:linear-gradient(180deg,#fff,var(--soft))}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.1}
+h1{font-size:clamp(46px,9vw,104px);margin:18px 0}
+.hero p{max-width:520px;margin:0 auto 34px;color:var(--mute)}
+.hero .btn+.btn{margin-left:10px}
+section{padding:96px 5vw;max-width:1240px;margin:auto}
+h2{font-size:clamp(34px,5vw,54px);text-align:center;margin-bottom:12px}
+.sub{text-align:center;color:var(--mute);margin-bottom:54px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.card .img{aspect-ratio:3/4;background:var(--soft);display:grid;place-items:center;color:#b9b4ab;font-size:12px;letter-spacing:.15em;text-transform:uppercase;transition:.3s}
+.card:hover .img{background:#ece8e2}
+.card h3{font-family:var(--serif);font-size:24px;font-weight:500;margin-top:16px}
+.card span{font-size:13px;color:var(--mute)}
+.card a{display:inline-block;margin-top:6px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border-bottom:1px solid var(--ink)}
+.band{background:var(--soft);max-width:none}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px;text-align:center;max-width:1100px;margin:auto}
+.vals h4{font-family:var(--serif);font-size:22px;font-weight:500}
+.vals p{font-size:14px;color:var(--mute)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about .img{aspect-ratio:4/5;background:var(--soft)}
+.about p{color:var(--mute);margin:18px 0 28px}
+.contact{text-align:center}
+.contact p{margin:6px 0;color:var(--mute)}
+.contact .btn{margin:28px 6px 0}
+footer{border-top:1px solid var(--line);text-align:center;padding:34px 5vw;font-size:12px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
+.marq{overflow:hidden;border-bottom:1px solid var(--line);padding:18px 0;white-space:nowrap}
+.marq div{display:inline-block;animation:mq 30s linear infinite;font-family:var(--serif);font-size:22px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.price{font-family:var(--serif);font-size:22px;font-weight:500;margin:2px 0 4px}
+.cat s{text-decoration:none;font-family:var(--serif);font-size:20px;color:var(--gold);margin-top:8px}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.cat{position:relative;grid-column:span 2;aspect-ratio:4/5;background:var(--soft);display:flex;flex-direction:column;justify-content:flex-end;padding:26px;transition:.35s}
+.cat:nth-child(n+4){grid-column:span 3;aspect-ratio:16/10}
+.cat em{position:absolute;top:22px;left:26px;font-family:var(--serif);font-style:normal;color:var(--gold);font-size:20px}
+.cat b{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.1}
+.cat i{font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.cat:hover{background:var(--ink);color:#fff}.cat:hover i{color:#ccc}
+.slider{position:relative}
+.track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.track::-webkit-scrollbar{display:none}
+.track .card{flex:0 0 clamp(240px,28vw,300px);scroll-snap-align:start}
+.arr{position:absolute;top:36%;z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:24px;cursor:pointer;transition:.25s}
+.arr.l{left:-14px}.arr.r{right:-14px}.arr:hover{background:var(--ink);color:#fff}
+.hero h1,.hero p,.hero .eyebrow{animation:up 1s ease both}
+@keyframes up{from{opacity:0;transform:translateY(18px)}}
+@media(max-width:760px){nav{display:none}.arr.l{left:4px}.arr.r{right:4px}.cats{grid-template-columns:1fr 1fr}.cat,.cat:nth-child(n+4){grid-column:span 1;aspect-ratio:4/5;padding:18px}.cat:last-child{grid-column:span 2;aspect-ratio:16/9}.cat b{font-size:26px}.cat em{top:16px;left:18px}.about{grid-template-columns:1fr}.hero .btn+.btn{margin:12px 0 0}}
+
+/* Images: drop photos in the images/ folder */
+.card .img,.about .img{position:relative;overflow:hidden}
+.card .img img,.about .img img,.cat>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .img img{transition:transform .6s}
+.card:hover .img img{transform:scale(1.05)}
+.cat{overflow:hidden}
+.cat.has::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.65));z-index:1}
+.cat.has{color:#fff}.cat.has i,.cat.has s{color:#fff}
+.cat.has:hover{background:var(--soft)}
+.cat b,.cat i,.cat s,.cat em{z-index:2}.cat b,.cat i,.cat s{position:relative}
